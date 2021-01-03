@@ -9,7 +9,7 @@ exec("npx standard --fix", (error, stdout, stderr) => {
 	console.log(i.split(".js")[0])
 } 
 const data = fs.readFileSync(".standard.config")
-if (logs.length > int(data)){
+if (logs.length > Number(data)){
 	process.exit(1)	
 }
    
