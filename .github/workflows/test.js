@@ -11,5 +11,6 @@ exec("npx standard --fix", (error, stdout, stderr) => {
 const data = fs.readFileSync(".standard.config")
 if (logs.length > int(data)){
 	process.exit(1)	
+}
    
 });
