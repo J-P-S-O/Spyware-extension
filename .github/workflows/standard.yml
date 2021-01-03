@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: standard-enforcer
 on: [push, pull_request]
 jobs:
   enforce-standard-js:
