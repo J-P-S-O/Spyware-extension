@@ -1,4 +1,5 @@
 const { exec } = require("child_process");
+const fs = require("fs")
 exec("cd..", () =>{})
 exec("cd..", ()=>{})
 exec("npx standard --fix", (error, stdout, stderr) => {
@@ -7,7 +8,8 @@ exec("npx standard --fix", (error, stdout, stderr) => {
 	for (i in logs){
 	console.log(i.split(".js")[0])
 } 
-if (logs.length > int(require("fs").readFileSync(".standard.config")){
+const data = fs.readFileSync(".standard.config")
+if (logs.length > int(data)){
 	process.exit(1)	
    
 });
